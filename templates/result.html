@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <style>
+        body { font-family: sans-serif; }
+        .result-card { border: 1px solid #ccc; padding: 16px; margin: 16px; border-radius: 8px; max-width: 400px; }
+        .profitability { font-size: 1.5em; font-weight: bold; }
+        .profit-yes { color: green; }
+        .profit-no { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Property Analysis Result</h1>
+    <div class="result-card">
+        <h3>Address: {{ result.address }}</h3>
+        <hr>
+        <p>Profitability Analysis:</p>
+        <div class="profitability {{ 'profit-yes' if result.profitability == 'Potentially Profitable' else 'profit-no' }}">
+            {{ result.profitability }}
+        </div>
+        <br>
+        <p><strong>Capitalization Rate (Cap Rate):</strong> {{ result.cap_rate }}</p>
+        <p><strong>Net Operating Income (NOI):</strong> {{ result.noi }}</p>
+        <p><strong>Estimated Annual Rent:</strong> {{ result.estimated_annual_rent }}</p>
+    </div>
+    <br>
+    <a href="/analyze">Analyze another property</a>
+</body>
+</html>

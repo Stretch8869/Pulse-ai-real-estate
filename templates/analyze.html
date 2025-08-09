@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Property</title>
+</head>
+<body>
+    <h1>Analyze Property Profitability</h1>
+    <form action="/calculate" method="post">
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="price">Purchase Price ($):</label><br>
+        <input type="number" id="price" name="price" required><br><br>
+
+        <label for="bedrooms">Number of Bedrooms:</label><br>
+        <input type="number" id="bedrooms" name="bedrooms" required><br><br>
+
+        <label for="bathrooms">Number of Bathrooms:</label><br>
+        <input type="number" id="bathrooms" name="bathrooms" required><br><br>
+
+        <label for="sqft">Square Footage:</label><br>
+        <input type="number" id="sqft" name="sqft" required><br><br>
+
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>
